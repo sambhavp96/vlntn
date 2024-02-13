@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index']);
 Route::get('/timeline', [PageController::class, 'timeline'])->name('timeline');
+Route::get('/messages', [PageController::class, 'messages'])->name('messages');
 
 
 

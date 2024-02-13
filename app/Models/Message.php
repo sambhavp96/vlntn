@@ -15,7 +15,7 @@ class Message extends Model
     ];
 
     protected $casts = [
-      'on' => 'timestamp'
+      'on' => 'datetime'
     ];
 
     public function medias(): HasMany

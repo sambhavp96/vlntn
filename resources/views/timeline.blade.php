@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
 
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" href="{{ asset('assets/favicon.png') }}" type="image/x-icon">
@@ -31,6 +32,10 @@
     <h2>Happy Valentine's day 2024 Maya.</h2>
     <br>
     <h3>I'll love you always.</h3>
+
+    <p>There one more surprise for you.</p>
+    <p>Have you ever wanted to read our old messages and relive those moments?</p>
+    <a href="{{ route('messages') }}">Click Here Then!</a>
 </footer>
 <script src="{{ asset('assets/timeline/js/modernizr.js') }}"></script> <!-- Modernizr -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
