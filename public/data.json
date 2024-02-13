@@ -1,0 +1,66 @@
+{
+	"data" : [
+		{
+			"title": "It's a match!",
+			"text" : "This is where our story unfolds.",
+			"img" : "bumble.jpg",
+			"date" : "July 18 2023"
+		},
+		{
+			"title" : "Insta-Connection",
+			"text" : "When I first asked for your instagram ID, and we started texting each other.",
+			"date" : "July 19 2023"
+		},
+		{
+			"title" : "Audio Affection ️📞",
+			"text" : "The day when you couldn't wait to hear my amazing voice so you asked to audio call me.",
+			"img" : "audio.jpeg",
+			"date" : "July 20 2023"
+		},
+		{
+			"title" : "Screen to Heart",
+			"text" : "Next day, even the audio call wasn't enough. So we both decided to video call, and it felt amazing.",
+			"img" : "video.jpeg",
+			"date" : "July 21 2023"
+		},
+		{
+			"title" : "Love's Grand Entrance - Our First Meet",
+			"text" : "The day we first met will always be special to me. Still remember you slowly descending from stairs, looking beautiful as ever.",
+			"img" : "first_meet.jpg",
+			"date" : "July 28 2023"
+		},
+		{
+			"title" : "Love Declarations 💏",
+			"text" : "The day we first expressed our love for each other. Remember how drunk you were, and what you replied to me when I first told you I love you? \"I love you too. Tara malai propose garnu parcha.\"",
+			"date" : "August 06 2023"
+		},
+		{
+			"title" : "My Most Special Birthday",
+			"text" : "My first birthday that I spent with you.",
+			"img" : "august9.jpeg",
+			"date" : "August 09 2023"
+		},
+		{
+			"title" : "Our First Kiss",
+			"text" : "One of the most happiest moment of my life was when I first kissed you.",
+			"date" : "August 19 2023"
+		},
+		{
+			"title" : "Her Birthday",
+			"text" : "I was so happy to be able to spend time with you on your birthday. You looked as beautiful as ever.",
+			"img" : "sep8.jpeg",
+			"date" : "September 08 2023"
+		},
+		{
+			"title" : "Dancing Hearts",
+			"text" : "The joy I felt dancing together for the first time on the night of prom.",
+			"img" : "prom.jpeg",
+			"date" : "December 01 2023"
+		},
+		{
+			"title" : "Evening Euphoria",
+			"text" : "The first time we spent a night together, and also when we first shared a drink. Oh the peace I felt to sleep with you in my arms.",
+			"date" : "December 25 2023"
+		}
+	]
+}

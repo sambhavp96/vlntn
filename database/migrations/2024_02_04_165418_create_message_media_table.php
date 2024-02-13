@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('message_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('type')->default('photos');
             $table->string('url');
-            $table->timestamp('on');
+//            $table->timestamp('on');
             $table->timestamps();
             $table->softDeletes();
         });

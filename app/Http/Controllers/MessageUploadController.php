@@ -48,17 +48,14 @@ class MessageUploadController extends Controller
                         'video_call' => $this->checkIfContentVideoCall($messageContent)
                     ])
                 ;
-                if (!$content)
-                {
-                    $this->storeAssets($messageItem, $message->id);
-                }
+                $this->storeAssets($messageItem, $message->id);
                 if (isset($messageItem['share']))
                 {
                     $this->manageShare($messageItem['share'], $message->id);
                 }
             }
             DB::commit();
-            return redirect()->to('/');
+            return redirect()->to('/message/upload');
         }catch (\Exception $exception)
         {
             DB::rollBack();
@@ -68,13 +65,16 @@ class MessageUploadController extends Controller
 
     public function manageShare($shareItem, $messageID)
     {
-        MessageShare::query()
-            ->create([
-                'message_id' => $messageID,
-                'link' => $shareItem['link'],
-                'owner' => $shareItem['original_content_owner'] ?? null
-            ])
+        if (isset($shareItem['link']))
+        {
+            MessageShare::query()
+                ->create([
+                    'message_id' => $messageID,
+                    'link' => $shareItem['link'],
+                    'owner' => $shareItem['original_content_owner'] ?? null
+                ])
             ;
+        }
     }
 
     public function storeAssetsByType($messageItem, $parentID, $type = 'photos')
@@ -83,7 +83,7 @@ class MessageUploadController extends Controller
         {
             foreach ($messageItem[$type] as $single)
             {
-                $this->storeMessageMediaQuery($type, $single, $parentID);
+                $this->storeMessageMediaQuery($single, $parentID, $type);
             }
         }
     }
@@ -94,8 +94,8 @@ class MessageUploadController extends Controller
             ->create([
                 'message_id' => $parentID,
                 'type' => $type,
-                'url' => $this->changeAssetURL($single['url']),
-                'on' => Carbon::createFromTimestampMs($single['creation_timestamp'])
+                'url' => $this->changeAssetURL($single['uri'] ?? $single['url']),
+//                'on' => Carbon::createFromTimestampMs($single['creation_timestamp'])
             ]);
     }
 
