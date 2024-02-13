@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MessageUploadController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index']);
+Route::get('/timeline', [PageController::class, 'timeline']);
+
+
 
 
 Route::get('/message/upload', [MessageUploadController::class, 'index'])->name('message.upload');
