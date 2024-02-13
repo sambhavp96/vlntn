@@ -126,7 +126,10 @@
     <div class="nine">
         <p>Did you like it?</p>
         <p>But there's more.</p>
-        <p class="last-smile">:)</p>
+        <p>...</p>
+        <p class="last-smile">
+            <a href="{{ route('timeline') }}">So click here for a surprise.</a>
+        </p>
     </div>
 </div>
 </body>
