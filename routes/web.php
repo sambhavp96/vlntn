@@ -19,8 +19,6 @@ Route::get('/', [PageController::class, 'index']);
 Route::get('/timeline', [PageController::class, 'timeline'])->name('timeline');
 Route::get('/messages', [PageController::class, 'messages'])->name('messages');
 
-
-
-
+Route::post('/authenticate', [PageController::class, 'authenticate'])->name('authenticate');
 Route::get('/message/upload', [MessageUploadController::class, 'index'])->name('message.upload');
 Route::post('/message/upload', [MessageUploadController::class, 'upload']);

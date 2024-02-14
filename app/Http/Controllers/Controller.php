@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Hash;
 
 class Controller extends BaseController
 {
@@ -13,11 +14,12 @@ class Controller extends BaseController
 
     public function checkSession()
     {
-        return session()->has('first-meet') && Carbon::make(session()->get('first-meet'))->isSameDay(Carbon::make('2023-07-28'));
+        $matchingHash = '$2y$12$sqnwgscn/6ecXYPOf4VqbeXtp69aDNcsXtQ/MYKSbgpdexnlqkvbu';
+        return session()->has('password') && session()->get('password') === $matchingHash;
     }
 
     public function authorizeUser()
     {
-        return view('authorize');
+        return view('password');
     }
 }
